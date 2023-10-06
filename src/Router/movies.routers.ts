@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { createMovie, deleteMovie, getMovies, getOneMovie, updateMessage } from "../logic";
-import { isIdMovieExist, isIdMovieValid, verifyIdMovieUnique } from "../middlewares";
+import { isIdMovieValid, verifyIdMovieUnique } from "../middlewares";
 
 export const moviesRouter = Router();
 
