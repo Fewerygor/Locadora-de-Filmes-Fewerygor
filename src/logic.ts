@@ -21,7 +21,7 @@ export const createMovie = async (req: Request, res: Response) => {
 
   const query = await client.query(queryConfig);
 
-  return res.status(201).json(query.rows);
+  return res.status(201).json(query.rows[0]);
 };
 
 export const getMovies = async (req: Request, res: Response) => {
@@ -72,5 +72,5 @@ export const updateMessage = async (req: Request, res: Response) => {
 
   const query = await client.query(queryConfig);
 
-  return res.status(200).json(query);
+  return res.status(200).json(query.rows[0]);
 };
